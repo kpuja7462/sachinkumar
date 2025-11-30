@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple One‑Page Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#ffe5e5;--card:#ffd6d6;--accent:#5e44ef;--muted:#1d1f7f;--glass:rgba(255,0,0,0.06)}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial; margin:0; background:linear-gradient(180deg,#e9ebee 0%,#0b1220 100%); color:#e6eef6; -webkit-font-smoothing:antialiased}
+    .container{max-width:1000px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700}
+    nav a{color:var(--muted);text-decoration:none;margin-left:16px;font-weight:500}
+    .hero{display:flex;gap:24px;align-items:center;padding:36px 0}
+    .hero-left{flex:1}
+    h1{font-size:28px;margin:0 0 12px}
+    p.lead{color:var(--muted);margin:0 0 18px}
+    .cta{display:inline-block;padding:10px 16px;border-radius:8px;background:var(--accent);color:#43bd66;text-decoration:none;font-weight:600}
+    .hero-right{flex:1;text-align:center}
+    .card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:28px 0}
+    .feature{padding:16px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);}
+    .portfolio{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+    .thumb{height:100px;background:linear-gradient(135deg,#158e5d,#008b64);display:flex;align-items:center;justify-content:center;border-radius:8px;color:var(--muted);font-weight:600}
+    form{display:grid;gap:10px}
+    input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:#1a1706;color:inherit}
+    button{padding:10px 14px;border-radius:8px;border:0;background:var(--accent);font-weight:700}
+    footer{color:var(--muted);text-align:center;padding:20px 0;margin-top:30px}
+    /* mobile */
+    @media(max-width:720px){h1{font-size:22px}.hero{flex-direction:column;text-align:left}.hero-right{order:-1}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo" style="overflow:hidden;padding:0">
+  <img src="https://i.imgur.com/1N3vQqd.png" alt="Lion Logo" style="width:100%;height:100%;object-fit:cover;border-radius:10px" />
+</div>
+        <div>
+          <div style="font-weight:700">My Website</div>
+          <div style="font-size:12px;color:var(--muted)">Simple • Fast • Responsive</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Ek simple, sundar single-page website</h1>
+        <p class="lead">Yeh template bilkul seedha-saadha hai — hero, features, portfolio aur contact form ke saath. Aap ise apne content se replace kar sakte hain.</p>
+        <a class="cta" href="#contact">Contact Kijiye</a>
+      </div>
+      <div class="hero-right">
+        <div class="card" style="width:260px;margin:0 auto">
+          <div style="font-weight:700;font-size:16px">Quick Info</div>
+          <div style="color:var(--muted);margin-top:8px">Role: Developer / Designer</div>
+          <div style="margin-top:12px;color:var(--muted);font-size:13px">Location: India</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 style="margin-bottom:8px">About</h2>
+      <p style="color:var(--muted)">Main ek beginner-friendly website template hoon. Aap sections ko add, remove ya edit kar sakte hain — images, text aur links sab change karna simple hai.</p>
+
+      <div class="features">
+        <div class="feature">
+          <strong>Responsive</strong>
+          <div style="color:var(--muted);font-size:13px">Mobile aur desktop dono par accha dikhai deta hai.</div>
+        </div>
+        <div class="feature">
+          <strong>Fast</strong>
+          <div style="color:var(--muted);font-size:13px">Lightweight CSS ke saath tez load.</div>
+        </div>
+        <div class="feature">
+          <strong>Easy to edit</strong>
+          <div style="color:var(--muted);font-size:13px">Seedha HTML/CSS — koi build step nahi.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <h2 style="margin-bottom:8px">Portfolio</h2>
+      <div class="portfolio">
+        <div class="thumb">Project 1</div>
+        <div class="thumb">Project 2</div>
+        <div class="thumb">Project 3</div>
+        <div class="thumb">Project 4</div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:22px">
+      <h2>Contact</h2>
+      <div style="display:grid;grid-template-columns:1fr;gap:12px;max-width:720px">
+        <form onsubmit="handleSubmit(event)">
+          <input type="text" id="name" placeholder="Aapka naam" required />
+          <input type="email" id="email" placeholder="Email" required />
+          <textarea id="message" rows="4" placeholder="Message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+        <div style="color:var(--muted);font-size:13px">(Form local hai — backend nahi. Submit karne par aapka message mailto link mein khulega.)</div>
+      </div>
+    </section>
+
+    <footer>
+      Built with ❤ — Simple One‑Page Template
+    </footer>
+  </div>
+
+  <script>
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const subject = encodeURIComponent('Website contact from ' + name);
+      const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
+      window.location.href = `mailto:you@example.com?subject=${subject}&body=${body}`;
+    }
+  </script>
+</body>
+</html>
